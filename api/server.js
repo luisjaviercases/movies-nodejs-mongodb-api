@@ -1,13 +1,15 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import './models/userModel.js';
+import './models/genreModel.js';
+import './models/movieModel.js';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import jsonwebtoken from 'jsonwebtoken';
 
 dotenv.config();
 
-import routes from './routes/userRoute.js';
+import apiRoutes from './routes/apiRoutes.js';
 
 const app = express();
 const port = process.env.SERVER_PORT || 3001;
@@ -26,7 +28,7 @@ mongoose.connect(mongoURI, option).then(() =>{
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
   if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
     jsonwebtoken.verify(req.headers.authorization.split(' ')[1], 'RESTFULAPIs', (err, decode) => {
       if (err) req.user = undefined;
@@ -39,7 +41,8 @@ app.use((req, res, next) => {
   }
 });
 
-routes(app);
+// Add API routes
+apiRoutes(app);
 
 app.use((req, res) => {
   res.status(404).send({ url: req.originalUrl + ' not found' });
