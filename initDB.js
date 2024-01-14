@@ -10,7 +10,7 @@ const mongoURI = process.env.MONGODB_URI;
 
 let newUser;
 
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
+mongoose.connect(mongoURI, {}).then(() => {
   console.log('Connected to MongoDB');
 
   // Delete all documents in collections before inserting new ones
@@ -104,7 +104,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }).
           "_id": "c87b3f09-9339-4eb9-adbc-f3cc214601e1",
           "genre": "e4f21b5a-5235-4b35-a26b-f88fd94da066",
           "availableDate": "2023-01-27T11:39:15.609+00:00",
-          "title": "l��on"
+          "title": "leon"
         },
         {
           "highlighted": false,
@@ -170,7 +170,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true }).
           "highlighted": false,
           "rating": 5,
           "poster": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/7dada20dafaaf219813e776f5992d221ceb689fa7fa51dfa74f054544047c686._RI_V_TTW_.jpg",
-          "cast": "Fran��ois Cluzet, Omar Sy",
+          "cast": "François Cluzet, Omar Sy",
           "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTYxNDA3MDQwNl5BMl5BanBnXkFtZTcwNTU4Mzc1Nw@@._V1_FMjpg_UX1000_.jpg",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus diam nunc, in dapibus tellus pulvinar nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc quam quam, fringilla condimentum justo eu, rhoncus venenatis nunc. Mauris suscipit dignissim enim, eget interdum lacus feugiat eget. Quisque ac ligula id arcu vulputate pulvinar vitae vel mauris. Mauris convallis lectus vel tristique commodo. Mauris dapibus tincidunt felis, nec feugiat nulla vulputate at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla fermentum pharetra diam nec tempor. Praesent eget ex sit amet nunc euismod varius vel ac eros. Maecenas at maximus nulla. Donec eget urna a augue aliquam fringilla. Curabitur sed lectus ut sapien blandit malesuada. Sed eget lobortis risus, eu elementum velit. Curabitur pulvinar ultricies massa.",
           "_id": "191a2531-27cc-4426-9913-dae1101df764",
