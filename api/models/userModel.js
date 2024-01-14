@@ -32,6 +32,10 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  favoriteMovies: {
+    type: [String],
+    default: []
+  }
 });
 
 UserSchema.methods.comparePassword = async function (password) {
