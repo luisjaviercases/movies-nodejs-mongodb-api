@@ -14,10 +14,10 @@ RUN npm install
 COPY . .
 
 # Copia el script de inicialización
-COPY initDB.js .
+COPY seedDB.js .
 
 # Expone el puerto en el que se ejecutará la aplicación
 EXPOSE 3001
 
 # Comando para iniciar la aplicación
-CMD ["sh", "-c", "node initDB.js && node api/server.js"]
+CMD ["sh", "-c", "node seedDB.js && node api/server.js"]
