@@ -4,9 +4,9 @@ import { getGenres } from '../controllers/genreController.js';
 
 export default function (app) {
   // User routes
-  app.route('/auth/register')
+  app.route('/films/auth/register')
     .post(register);
-  app.route('/auth/sign_in')
+  app.route('/films/auth/sign-in')
     .post(sign_in);
 
   // Movies routes
