@@ -23,7 +23,7 @@ The application has been Dockerized, allowing it to run consistently in any envi
 
 ### Manually
 
-Si por el contrario lo que deseas es ejecutar manualmente el proyecto, será necesario que instales MongoDB en tu equipo y sigas los siguientes pasos:
+If what you want is to run the project manually, you will need to install MongoDB on your computer and follow next steps:
 
 #### Install dependencies
 
