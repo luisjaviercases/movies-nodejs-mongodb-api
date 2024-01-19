@@ -19,7 +19,15 @@ Password: test
 
 ### Docker
 
-The application has been Dockerized, allowing it to run consistently in any environment. That way, just by executing two commands we will have the application fully functional, with the database seeded by default.
+The application has been Dockerized, allowing it to run consistently in any environment. That way, just by executing next two commands we will have the application fully functional, with the database seeded by default.
+
+```shell
+docker-compose build
+```
+
+```shell
+docker-compose up
+```
 
 ### Manually
 
